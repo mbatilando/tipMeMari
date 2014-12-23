@@ -26,28 +26,54 @@
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MRZ-jF-Ckf" userLabel="tipAmount">
+                                        <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="150" id="cku-Xv-zaD"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="cku-Xv-zaD"/>
+                                            </mask>
+                                        </variation>
+                                        <variation key="widthClass=compact">
+                                            <mask key="constraints">
+                                                <include reference="cku-Xv-zaD"/>
+                                            </mask>
+                                        </variation>
+                                    </textField>
                                 </subviews>
                                 <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="MRZ-jF-Ckf" secondAttribute="trailing" constant="10" id="AHD-Ji-UdE"/>
                                     <constraint firstItem="CQG-yn-nes" firstAttribute="leading" secondItem="fRP-gt-Q3j" secondAttribute="leading" constant="10" id="B5S-CQ-HH9"/>
+                                    <constraint firstAttribute="centerY" secondItem="MRZ-jF-Ckf" secondAttribute="centerY" id="DD0-Dj-iss"/>
                                     <constraint firstItem="CQG-yn-nes" firstAttribute="top" secondItem="fRP-gt-Q3j" secondAttribute="top" constant="10" id="FH7-uf-7dh"/>
                                 </constraints>
                                 <variation key="default">
                                     <mask key="subviews">
                                         <exclude reference="CQG-yn-nes"/>
+                                        <exclude reference="MRZ-jF-Ckf"/>
                                     </mask>
                                     <mask key="constraints">
                                         <exclude reference="B5S-CQ-HH9"/>
                                         <exclude reference="FH7-uf-7dh"/>
+                                        <exclude reference="AHD-Ji-UdE"/>
+                                        <exclude reference="DD0-Dj-iss"/>
                                     </mask>
                                 </variation>
                                 <variation key="widthClass=compact">
                                     <mask key="subviews">
                                         <include reference="CQG-yn-nes"/>
+                                        <include reference="MRZ-jF-Ckf"/>
                                     </mask>
                                     <mask key="constraints">
                                         <include reference="B5S-CQ-HH9"/>
                                         <include reference="FH7-uf-7dh"/>
+                                        <include reference="AHD-Ji-UdE"/>
+                                        <include reference="DD0-Dj-iss"/>
                                     </mask>
                                 </variation>
                             </view>
@@ -60,28 +86,42 @@
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="485-aO-RjK" userLabel="totalAmount">
+                                        <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" red="0.21886939699999999" green="1" blue="0.1081281318" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstItem="0Tl-fY-XFX" firstAttribute="leading" secondItem="0GE-xW-ov7" secondAttribute="leading" constant="10" id="JUJ-ha-0rV"/>
                                     <constraint firstItem="0Tl-fY-XFX" firstAttribute="top" secondItem="0GE-xW-ov7" secondAttribute="top" constant="10" id="QzF-tQ-50D"/>
+                                    <constraint firstAttribute="trailing" secondItem="485-aO-RjK" secondAttribute="trailing" constant="10" id="bTJ-BN-VCr"/>
+                                    <constraint firstAttribute="centerY" secondItem="485-aO-RjK" secondAttribute="centerY" id="qvV-Wu-Zj7"/>
                                 </constraints>
                                 <variation key="default">
                                     <mask key="subviews">
                                         <exclude reference="0Tl-fY-XFX"/>
+                                        <exclude reference="485-aO-RjK"/>
                                     </mask>
                                     <mask key="constraints">
                                         <exclude reference="JUJ-ha-0rV"/>
                                         <exclude reference="QzF-tQ-50D"/>
+                                        <exclude reference="bTJ-BN-VCr"/>
+                                        <exclude reference="qvV-Wu-Zj7"/>
                                     </mask>
                                 </variation>
                                 <variation key="widthClass=compact">
                                     <mask key="subviews">
                                         <include reference="0Tl-fY-XFX"/>
+                                        <include reference="485-aO-RjK"/>
                                     </mask>
                                     <mask key="constraints">
                                         <include reference="JUJ-ha-0rV"/>
                                         <include reference="QzF-tQ-50D"/>
+                                        <include reference="bTJ-BN-VCr"/>
+                                        <include reference="qvV-Wu-Zj7"/>
                                     </mask>
                                 </variation>
                             </view>
@@ -94,28 +134,54 @@
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="$125" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fwH-vU-Jrp" userLabel="balanceAmount">
+                                        <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="150" id="VeV-9Q-Qxu"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="VeV-9Q-Qxu"/>
+                                            </mask>
+                                        </variation>
+                                        <variation key="widthClass=compact">
+                                            <mask key="constraints">
+                                                <include reference="VeV-9Q-Qxu"/>
+                                            </mask>
+                                        </variation>
+                                    </textField>
                                 </subviews>
                                 <color key="backgroundColor" red="1" green="0.13933040990000001" blue="0.1173394032" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstItem="Mg7-zm-RqU" firstAttribute="leading" secondItem="Sjp-KX-U89" secondAttribute="leading" constant="10" id="BxV-CX-tSQ"/>
+                                    <constraint firstAttribute="centerY" secondItem="fwH-vU-Jrp" secondAttribute="centerY" id="hM3-M8-OOy"/>
+                                    <constraint firstAttribute="trailing" secondItem="fwH-vU-Jrp" secondAttribute="trailing" constant="10" id="hRc-UM-CbS"/>
                                     <constraint firstItem="Mg7-zm-RqU" firstAttribute="top" secondItem="Sjp-KX-U89" secondAttribute="top" constant="10" id="qbU-yI-7Gg"/>
                                 </constraints>
                                 <variation key="default">
                                     <mask key="subviews">
                                         <exclude reference="Mg7-zm-RqU"/>
+                                        <exclude reference="fwH-vU-Jrp"/>
                                     </mask>
                                     <mask key="constraints">
                                         <exclude reference="BxV-CX-tSQ"/>
                                         <exclude reference="qbU-yI-7Gg"/>
+                                        <exclude reference="hM3-M8-OOy"/>
+                                        <exclude reference="hRc-UM-CbS"/>
                                     </mask>
                                 </variation>
                                 <variation key="widthClass=compact">
                                     <mask key="subviews">
                                         <include reference="Mg7-zm-RqU"/>
+                                        <include reference="fwH-vU-Jrp"/>
                                     </mask>
                                     <mask key="constraints">
                                         <include reference="BxV-CX-tSQ"/>
                                         <include reference="qbU-yI-7Gg"/>
+                                        <include reference="hM3-M8-OOy"/>
+                                        <include reference="hRc-UM-CbS"/>
                                     </mask>
                                 </variation>
                             </view>
@@ -178,6 +244,11 @@
                             </mask>
                         </variation>
                     </view>
+                    <connections>
+                        <outlet property="balanceAmount" destination="fwH-vU-Jrp" id="uMl-sf-WZt"/>
+                        <outlet property="tipAmount" destination="DD0-Dj-iss" id="6dN-Zs-XQv"/>
+                        <outlet property="totalAmount" destination="485-aO-RjK" id="61A-fX-HN9"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
