@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="TipMeMari" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
@@ -15,10 +16,97 @@
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fRP-gt-Q3j" userLabel="TipContainer">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0GE-xW-ov7" userLabel="TotalContainer">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <color key="backgroundColor" red="0.21886939699999999" green="1" blue="0.1081281318" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Sjp-KX-U89" userLabel="BalanceContainer">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <color key="backgroundColor" red="1" green="0.13933040990000001" blue="0.1173394032" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Sjp-KX-U89" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="Axl-I2-dv2"/>
+                            <constraint firstItem="Sjp-KX-U89" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" id="LEN-EP-KMG"/>
+                            <constraint firstItem="fRP-gt-Q3j" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="aLz-XK-DH8"/>
+                            <constraint firstAttribute="trailing" secondItem="Sjp-KX-U89" secondAttribute="trailing" id="eIn-Vb-wVu"/>
+                            <constraint firstItem="0GE-xW-ov7" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="fEf-6E-R8p"/>
+                            <constraint firstAttribute="trailing" secondItem="fRP-gt-Q3j" secondAttribute="trailing" id="gLe-Hm-wdL"/>
+                            <constraint firstAttribute="trailing" secondItem="0GE-xW-ov7" secondAttribute="trailing" id="iNy-4y-VDg"/>
+                            <constraint firstAttribute="height" secondItem="0GE-xW-ov7" secondAttribute="height" multiplier="3:1" id="jJ8-gT-6Oo"/>
+                            <constraint firstAttribute="height" secondItem="Sjp-KX-U89" secondAttribute="height" multiplier="3:1" id="jNU-H2-3f7"/>
+                            <constraint firstItem="0GE-xW-ov7" firstAttribute="top" secondItem="fRP-gt-Q3j" secondAttribute="bottom" id="ptQ-du-OsW"/>
+                            <constraint firstItem="fRP-gt-Q3j" firstAttribute="top" secondItem="Sjp-KX-U89" secondAttribute="bottom" id="sJ0-Nu-aTj"/>
+                            <constraint firstAttribute="height" secondItem="fRP-gt-Q3j" secondAttribute="height" multiplier="3:1" id="vZj-se-kUq"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="fRP-gt-Q3j"/>
+                                <exclude reference="0GE-xW-ov7"/>
+                                <exclude reference="Sjp-KX-U89"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="Axl-I2-dv2"/>
+                                <exclude reference="LEN-EP-KMG"/>
+                                <exclude reference="eIn-Vb-wVu"/>
+                                <exclude reference="jNU-H2-3f7"/>
+                                <exclude reference="aLz-XK-DH8"/>
+                                <exclude reference="gLe-Hm-wdL"/>
+                                <exclude reference="sJ0-Nu-aTj"/>
+                                <exclude reference="vZj-se-kUq"/>
+                                <exclude reference="fEf-6E-R8p"/>
+                                <exclude reference="iNy-4y-VDg"/>
+                                <exclude reference="jJ8-gT-6Oo"/>
+                                <exclude reference="ptQ-du-OsW"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="fRP-gt-Q3j"/>
+                                <include reference="0GE-xW-ov7"/>
+                                <include reference="Sjp-KX-U89"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="Axl-I2-dv2"/>
+                                <include reference="LEN-EP-KMG"/>
+                                <include reference="eIn-Vb-wVu"/>
+                                <include reference="jNU-H2-3f7"/>
+                                <include reference="aLz-XK-DH8"/>
+                                <include reference="gLe-Hm-wdL"/>
+                                <include reference="sJ0-Nu-aTj"/>
+                                <include reference="vZj-se-kUq"/>
+                                <include reference="fEf-6E-R8p"/>
+                                <include reference="iNy-4y-VDg"/>
+                                <include reference="jJ8-gT-6Oo"/>
+                                <include reference="ptQ-du-OsW"/>
+                            </mask>
+                        </variation>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="379.5" y="325"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="gwa-XX-4UY">
+            <objects>
+                <viewController id="8Pl-uX-uk6" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="tfa-Z1-kgH"/>
+                        <viewControllerLayoutGuide type="bottom" id="IT9-xG-tP5"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="DY0-3k-r1Y">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="w48-as-zXH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
         </scene>
     </scenes>
