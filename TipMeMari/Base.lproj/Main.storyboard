@@ -19,15 +19,105 @@
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fRP-gt-Q3j" userLabel="TipContainer">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="tip" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CQG-yn-nes">
+                                        <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
                                 <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="CQG-yn-nes" firstAttribute="leading" secondItem="fRP-gt-Q3j" secondAttribute="leading" constant="10" id="B5S-CQ-HH9"/>
+                                    <constraint firstItem="CQG-yn-nes" firstAttribute="top" secondItem="fRP-gt-Q3j" secondAttribute="top" constant="10" id="FH7-uf-7dh"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="subviews">
+                                        <exclude reference="CQG-yn-nes"/>
+                                    </mask>
+                                    <mask key="constraints">
+                                        <exclude reference="B5S-CQ-HH9"/>
+                                        <exclude reference="FH7-uf-7dh"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=compact">
+                                    <mask key="subviews">
+                                        <include reference="CQG-yn-nes"/>
+                                    </mask>
+                                    <mask key="constraints">
+                                        <include reference="B5S-CQ-HH9"/>
+                                        <include reference="FH7-uf-7dh"/>
+                                    </mask>
+                                </variation>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0GE-xW-ov7" userLabel="TotalContainer">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="total" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Tl-fY-XFX">
+                                        <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
                                 <color key="backgroundColor" red="0.21886939699999999" green="1" blue="0.1081281318" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="0Tl-fY-XFX" firstAttribute="leading" secondItem="0GE-xW-ov7" secondAttribute="leading" constant="10" id="JUJ-ha-0rV"/>
+                                    <constraint firstItem="0Tl-fY-XFX" firstAttribute="top" secondItem="0GE-xW-ov7" secondAttribute="top" constant="10" id="QzF-tQ-50D"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="subviews">
+                                        <exclude reference="0Tl-fY-XFX"/>
+                                    </mask>
+                                    <mask key="constraints">
+                                        <exclude reference="JUJ-ha-0rV"/>
+                                        <exclude reference="QzF-tQ-50D"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=compact">
+                                    <mask key="subviews">
+                                        <include reference="0Tl-fY-XFX"/>
+                                    </mask>
+                                    <mask key="constraints">
+                                        <include reference="JUJ-ha-0rV"/>
+                                        <include reference="QzF-tQ-50D"/>
+                                    </mask>
+                                </variation>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Sjp-KX-U89" userLabel="BalanceContainer">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="balance" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mg7-zm-RqU">
+                                        <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
                                 <color key="backgroundColor" red="1" green="0.13933040990000001" blue="0.1173394032" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="Mg7-zm-RqU" firstAttribute="leading" secondItem="Sjp-KX-U89" secondAttribute="leading" constant="10" id="BxV-CX-tSQ"/>
+                                    <constraint firstItem="Mg7-zm-RqU" firstAttribute="top" secondItem="Sjp-KX-U89" secondAttribute="top" constant="10" id="qbU-yI-7Gg"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="subviews">
+                                        <exclude reference="Mg7-zm-RqU"/>
+                                    </mask>
+                                    <mask key="constraints">
+                                        <exclude reference="BxV-CX-tSQ"/>
+                                        <exclude reference="qbU-yI-7Gg"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=compact">
+                                    <mask key="subviews">
+                                        <include reference="Mg7-zm-RqU"/>
+                                    </mask>
+                                    <mask key="constraints">
+                                        <include reference="BxV-CX-tSQ"/>
+                                        <include reference="qbU-yI-7Gg"/>
+                                    </mask>
+                                </variation>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
