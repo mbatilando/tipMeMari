@@ -9,7 +9,7 @@ The prework took me 2.5 hours. Styling and creating the UI took the longest.
 
 **Which required and optional stories have you completed?**
 
-I used a UISlider element to adjust the tip value.
+I used a UISlider element to adjust the tip so that it works for any value.
 
 I also made my design adaptive so that it works on different screen sizes and in landscape
 mode.
