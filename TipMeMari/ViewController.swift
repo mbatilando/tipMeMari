@@ -25,6 +25,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
     
     override func touchesBegan(touches: NSSet, withEvent event: UIEvent) {
         self.view.endEditing(true)
+        updateValues()
     }
 
     override func didReceiveMemoryWarning() {
@@ -33,16 +34,20 @@ class ViewController: UIViewController, UITextFieldDelegate {
     }
 
     @IBAction func sliderChanged(sender: UISlider) {
-        var currentTipValue = Double(Int(sender.value)),
-            balance = (balanceAmount.text as NSString).doubleValue,
-            newTotal = calculateTotal(balance, tip: currentTipValue)
-
-        tipAmount.text = "\(Int(sender.value))"
-        totalAmount.text = "\(newTotal)"
+        updateValues()
     }
     
     func calculateTotal (amount:Double, tip:Double) -> Double {
         return amount + (amount * Double(tip/100))
+    }
+    
+    func updateValues () -> () {
+        var currentTipValue = Double(Int(slider.value)),
+            balance = (balanceAmount.text as NSString).doubleValue,
+            newTotal = calculateTotal(balance, tip: currentTipValue)
+        
+        tipAmount.text = "\(Int(slider.value))"
+        totalAmount.text = "\(newTotal)"
     }
 }
 
