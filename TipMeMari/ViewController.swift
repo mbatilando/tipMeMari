@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet weak var balanceAmount: UITextField!
     @IBOutlet weak var totalAmount: UILabel!
@@ -20,6 +20,11 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         balanceAmount.text = String(0)
+        balanceAmount.delegate = self
+    }
+    
+    override func touchesBegan(touches: NSSet, withEvent event: UIEvent) {
+        self.view.endEditing(true)
     }
 
     override func didReceiveMemoryWarning() {
