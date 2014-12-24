@@ -10,6 +10,9 @@ import UIKit
 
 class ViewController: UIViewController, UITextFieldDelegate {
 
+    @IBOutlet weak var balanceContainer: UIView!
+    @IBOutlet weak var tipContainer: UIView!
+    @IBOutlet weak var totalContainer: UIView!
     @IBOutlet weak var balanceAmount: UITextField!
     @IBOutlet weak var totalAmount: UILabel!
     @IBOutlet weak var tipAmount: UILabel!
@@ -19,8 +22,18 @@ class ViewController: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        balanceAmount.text = String(0)
         balanceAmount.delegate = self
+        balanceContainer.backgroundColor = UIColorFromHex(0xA0FB71)
+        tipContainer.backgroundColor = UIColorFromHex(0x58f8AB)
+        totalContainer.backgroundColor = UIColorFromHex(0x12F6E9)
+    }
+    
+    func UIColorFromHex(rgbValue:UInt32, alpha:Double=1.0) -> UIColor {
+        let red = CGFloat((rgbValue & 0xFF0000) >> 16)/256.0
+        let green = CGFloat((rgbValue & 0xFF00) >> 8)/256.0
+        let blue = CGFloat(rgbValue & 0xFF)/256.0
+        
+        return UIColor(red:red, green:green, blue:blue, alpha:CGFloat(alpha))
     }
     
     override func touchesBegan(touches: NSSet, withEvent event: UIEvent) {
@@ -42,7 +55,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
     }
     
     func updateValues () -> () {
-        var currentTipValue = Double(Int(slider.value)),
+        var currentTipValue = Double(Int(slider.value)), // Cast to int to round
             balance = (balanceAmount.text as NSString).doubleValue,
             newTotal = calculateTotal(balance, tip: currentTipValue)
         
