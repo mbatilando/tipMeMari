@@ -28,16 +28,16 @@ class ViewController: UIViewController {
     }
 
     @IBAction func sliderChanged(sender: UISlider) {
-        var currentTipValue = Int(sender.value),
-            total = balanceAmount.text?.floatValue ?? 0.0,
-            newTotal = calculateTotal(total, tip: currentTipValue)
+        var currentTipValue = Double(Int(sender.value)),
+            balance = (balanceAmount.text as NSString).doubleValue,
+            newTotal = calculateTotal(balance, tip: currentTipValue)
 
-        tipAmount.text = "\(currentTipValue)"
+        tipAmount.text = "\(Int(sender.value))"
         totalAmount.text = "\(newTotal)"
     }
     
-    func calculateTotal (amount:Int, tip:Int) -> Float {
-        return (amount * Float(tip/100))
+    func calculateTotal (amount:Double, tip:Double) -> Double {
+        return amount + (amount * Double(tip/100))
     }
 }
 
