@@ -31,14 +31,22 @@ class SettingsViewController: UIViewController {
         }
     }
     
+    override func viewWillDisappear(animated: Bool) {
+        super.viewWillDisappear(animated)
+        updateSettings()
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
     
     @IBAction func tipSliderChanged(sender: UISlider) {
         defaultTipAmountLabel.text = "\(Int(sender.value))"
-        delegate?.setNewSettings(sender.value)
-        defaults.setFloat(sender.value, forKey: "defaultTip")
+    }
+    
+    func updateSettings() {
+        delegate?.setNewSettings(defaultTipAmountSlider.value)
+        defaults.setFloat(defaultTipAmountSlider.value, forKey: "defaultTip")
         defaults.synchronize()
     }
     
