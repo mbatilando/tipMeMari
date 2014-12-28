@@ -19,6 +19,8 @@ class SettingsViewController: UIViewController {
     var delegate: newSettingsDelegate?,
         defaults = NSUserDefaults.standardUserDefaults()
     
+    var backgroundHue:CGFloat = 0.0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         defaultTipContainer.backgroundColor = UIColorFromHex(0x6393F3)
@@ -43,6 +45,7 @@ class SettingsViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
+    
     
     @IBAction func tipSliderChanged(sender: UISlider) {
         defaultTipAmountLabel.text = "\(Int(sender.value))"

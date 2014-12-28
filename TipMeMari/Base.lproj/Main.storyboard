@@ -250,7 +250,7 @@
                                             </slider>
                                         </subviews>
                                         <constraints>
-                                            <constraint firstItem="gBl-Z5-QYW" firstAttribute="top" secondItem="7Aq-7K-BBK" secondAttribute="bottom" constant="25" id="13W-uc-Vtv"/>
+                                            <constraint firstItem="gBl-Z5-QYW" firstAttribute="top" secondItem="7Aq-7K-BBK" secondAttribute="bottom" constant="15" id="13W-uc-Vtv"/>
                                             <constraint firstAttribute="width" constant="300" id="EpC-z6-6zS"/>
                                             <constraint firstItem="Ja5-IF-7Ih" firstAttribute="leading" secondItem="7Aq-7K-BBK" secondAttribute="trailing" id="IOS-NJ-WE5"/>
                                             <constraint firstAttribute="centerX" secondItem="gBl-Z5-QYW" secondAttribute="centerX" id="NBP-ea-kkO"/>
@@ -478,7 +478,7 @@
                                             <constraint firstAttribute="centerX" secondItem="EjT-Te-QaZ" secondAttribute="centerX" id="CB7-Dg-0MZ"/>
                                             <constraint firstAttribute="centerX" secondItem="I8M-sO-c0o" secondAttribute="centerX" id="MYO-BE-8eZ"/>
                                             <constraint firstAttribute="height" constant="150" id="TiX-b8-Sew"/>
-                                            <constraint firstItem="EjT-Te-QaZ" firstAttribute="top" secondItem="I8M-sO-c0o" secondAttribute="bottom" constant="25" id="V8c-Vk-4sg"/>
+                                            <constraint firstItem="EjT-Te-QaZ" firstAttribute="top" secondItem="I8M-sO-c0o" secondAttribute="bottom" constant="15" id="V8c-Vk-4sg"/>
                                             <constraint firstItem="dE8-3N-o1n" firstAttribute="leading" secondItem="I8M-sO-c0o" secondAttribute="trailing" id="X9f-a3-MDB"/>
                                             <constraint firstAttribute="width" constant="300" id="lZ5-wd-pG6"/>
                                             <constraint firstItem="EjT-Te-QaZ" firstAttribute="width" secondItem="dor-Om-Nrs" secondAttribute="width" id="u2a-cP-XCq"/>
