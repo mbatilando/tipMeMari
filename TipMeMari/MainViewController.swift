@@ -23,7 +23,8 @@ class ViewController: UIViewController, UITextFieldDelegate, newSettingsDelegate
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         balanceAmount.delegate = self
-        balanceContainer.backgroundColor = UIColorFromHex(0x53F1E5)
+        balanceContainer.backgroundColor = UIColorFromHex(0x6393F3)
+//        balanceContainer.backgroundColor = UIColorFromHex(0x53F1E5)
         tipContainer.backgroundColor = UIColorFromHex(0xFFC558)
         totalContainer.backgroundColor = UIColorFromHex(0xFFA158)
         var defaultTip = defaults.floatForKey("defaultTip")

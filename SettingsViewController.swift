@@ -23,7 +23,7 @@ class SettingsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        defaultTipContainer.backgroundColor = UIColorFromHex(0x6393F3)
+        defaultTipContainer.backgroundColor = UIColorFromHex(0x53F1E5)
         var defaultTip = defaults.floatForKey("defaultTip")
         if (defaultTip != 0) {
             setDefaultTip(defaultTip)
