@@ -590,6 +590,7 @@
                     <connections>
                         <outlet property="defaultTipAmountLabel" destination="I8M-sO-c0o" id="k4P-Cr-xcc"/>
                         <outlet property="defaultTipAmountSlider" destination="EjT-Te-QaZ" id="wAT-1X-ckg"/>
+                        <outlet property="defaultTipContainer" destination="h9E-YM-k6E" id="PWm-pj-Bro"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hjE-nA-XQg" userLabel="First Responder" sceneMemberID="firstResponder"/>

@@ -5,8 +5,8 @@
 //  Created by Mari Batilando on 12/22/14.
 //  Copyright (c) 2014 MariBatilando. All rights reserved.
 //
-
 import UIKit
+
 class ViewController: UIViewController, UITextFieldDelegate, newSettingsDelegate {
 
     @IBOutlet weak var balanceContainer: UIView!
