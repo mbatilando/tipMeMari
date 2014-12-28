@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>D4790193-EDAD-42D8-96AC-406847631785</string>
+	<key>IDESourceControlProjectName</key>
+	<string>TipMeMari</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>26C40DC2A751430DF047E0C8243F4B7AAEC3B36F</key>
+		<string>https://github.com/mbatilando/tipMeMari.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>TipMeMari.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>26C40DC2A751430DF047E0C8243F4B7AAEC3B36F</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/mbatilando/tipMeMari.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>26C40DC2A751430DF047E0C8243F4B7AAEC3B36F</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>26C40DC2A751430DF047E0C8243F4B7AAEC3B36F</string>
+			<key>IDESourceControlWCCName</key>
+			<string>TipMeMari</string>
+		</dict>
+	</array>
+</dict>
+</plist>

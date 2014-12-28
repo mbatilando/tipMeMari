@@ -7,8 +7,7 @@
 //
 
 import UIKit
-
-class ViewController: UIViewController, UITextFieldDelegate {
+class ViewController: UIViewController, UITextFieldDelegate, newSettingsDelegate {
 
     @IBOutlet weak var balanceContainer: UIView!
     @IBOutlet weak var tipContainer: UIView!
@@ -18,6 +17,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var tipAmount: UILabel!
     @IBOutlet weak var slider: UISlider!
     
+    var defaults = NSUserDefaults.standardUserDefaults()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,6 +26,33 @@ class ViewController: UIViewController, UITextFieldDelegate {
         balanceContainer.backgroundColor = UIColorFromHex(0xA0FB71)
         tipContainer.backgroundColor = UIColorFromHex(0x58f8AB)
         totalContainer.backgroundColor = UIColorFromHex(0x12F6E9)
+        var defaultTip = defaults.floatForKey("defaultTip")
+        if (defaultTip != 0) {
+            tipAmount.text = "\(Int(defaultTip))"
+            slider.value = defaultTip
+        }
+        else {
+            tipAmount.text = "20"
+            slider.value = Float(20)
+            defaults.setFloat(Float(20), forKey: "defaultTip")
+            defaults.synchronize()
+        }
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue!, sender: AnyObject!) {
+        var secondViewController = (segue.destinationViewController as  SettingsViewController)
+        secondViewController.delegate = self
+    }
+    
+    func setNewSettings(value: Float) {
+        if (value != slider.value) {
+            slider.value = value
+        }
+
+        var currentTipValue = Double(Int(value)), // Cast to int to round
+            balance = (balanceAmount.text as NSString).doubleValue;
+
+        updateValues(currentTipValue, balance: balance)
     }
     
     func UIColorFromHex(rgbValue:UInt32, alpha:Double=1.0) -> UIColor {
@@ -62,6 +89,14 @@ class ViewController: UIViewController, UITextFieldDelegate {
         tipAmount.text = "\(Int(slider.value))"
         totalAmount.text = "\(newTotal)"
     }
+    
+    func updateValues(tipValue: Double, balance: Double) -> () {
+        var newTotal = calculateTotal(balance, tip: tipValue)
+        
+        tipAmount.text = "\(Int(slider.value))"
+        totalAmount.text = "\(newTotal)"
+    }
+
 }
 
 

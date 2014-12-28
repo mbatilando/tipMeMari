@@ -5,10 +5,10 @@
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
-        <!--Calculate Tip-->
+        <!--MainViewController-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="TipMeMari" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="MainViewController" id="vXZ-lx-hvc" customClass="ViewController" customModule="TipMeMari" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
@@ -39,7 +39,6 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" red="1" green="0.44196329280000002" blue="0.29997523250000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstItem="485-aO-RjK" firstAttribute="leading" secondItem="0p1-eH-MHI" secondAttribute="trailing" constant="5" id="Gwp-XF-7bQ"/>
                                     <constraint firstItem="0Tl-fY-XFX" firstAttribute="leading" secondItem="0GE-xW-ov7" secondAttribute="leading" constant="10" id="JUJ-ha-0rV"/>
@@ -188,7 +187,6 @@
                                         </variation>
                                     </view>
                                 </subviews>
-                                <color key="backgroundColor" red="1" green="0.13933040990000001" blue="0.1173394032" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="centerY" secondItem="UE9-A4-2dO" secondAttribute="centerY" id="84o-lJ-EeN"/>
                                     <constraint firstItem="Mg7-zm-RqU" firstAttribute="leading" secondItem="Sjp-KX-U89" secondAttribute="leading" constant="10" id="BxV-CX-tSQ"/>
@@ -303,7 +301,6 @@
                                         </variation>
                                     </view>
                                 </subviews>
-                                <color key="backgroundColor" red="1" green="0.27855138759999998" blue="0.79044842640000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstItem="CQG-yn-nes" firstAttribute="leading" secondItem="fRP-gt-Q3j" secondAttribute="leading" constant="10" id="B5S-CQ-HH9"/>
                                     <constraint firstItem="CQG-yn-nes" firstAttribute="top" secondItem="fRP-gt-Q3j" secondAttribute="top" constant="10" id="FH7-uf-7dh"/>
@@ -433,10 +430,10 @@
             </objects>
             <point key="canvasLocation" x="1129.5" y="227"/>
         </scene>
-        <!--Settings-->
+        <!--SettingsViewController-->
         <scene sceneID="5R0-EJ-bGg">
             <objects>
-                <viewController id="7Mi-cX-lSY" sceneMemberID="viewController">
+                <viewController title="SettingsViewController" id="7Mi-cX-lSY" customClass="SettingsViewController" customModule="TipMeMari" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ZAE-dx-WCw"/>
                         <viewControllerLayoutGuide type="bottom" id="uGD-xU-f0b"/>
@@ -456,7 +453,7 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dor-Om-Nrs">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="50" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I8M-sO-c0o" userLabel="defaultTipAmount">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="20" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I8M-sO-c0o" userLabel="defaultTipAmount">
                                                 <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="50"/>
                                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -468,8 +465,11 @@
                                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="EjT-Te-QaZ" userLabel="defaultTipSlider">
+                                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="20" minValue="0.0" maxValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="EjT-Te-QaZ" userLabel="defaultTipSlider">
                                                 <rect key="frame" x="0.0" y="-15" width="118" height="31"/>
+                                                <connections>
+                                                    <action selector="tipSliderChanged:" destination="7Mi-cX-lSY" eventType="valueChanged" id="7Y5-bt-24S"/>
+                                                </connections>
                                             </slider>
                                         </subviews>
                                         <constraints>
@@ -521,7 +521,6 @@
                                         </variation>
                                     </view>
                                 </subviews>
-                                <color key="backgroundColor" red="1" green="0.44196329280000002" blue="0.29997523250000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstItem="xp4-m7-Z5o" firstAttribute="leading" secondItem="h9E-YM-k6E" secondAttribute="leading" constant="10" id="FsH-MA-3cx"/>
                                     <constraint firstAttribute="centerX" secondItem="dor-Om-Nrs" secondAttribute="centerX" id="S3Y-eR-qPW"/>
@@ -588,6 +587,10 @@
                         </variation>
                     </view>
                     <navigationItem key="navigationItem" title="Settings" id="Hcc-0b-hHv"/>
+                    <connections>
+                        <outlet property="defaultTipAmountLabel" destination="I8M-sO-c0o" id="k4P-Cr-xcc"/>
+                        <outlet property="defaultTipAmountSlider" destination="EjT-Te-QaZ" id="wAT-1X-ckg"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hjE-nA-XQg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

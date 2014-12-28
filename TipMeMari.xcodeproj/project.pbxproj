@@ -8,11 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		4C0ABDEE1A48E00D00C2D5FC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C0ABDED1A48E00D00C2D5FC /* AppDelegate.swift */; };
-		4C0ABDF01A48E00D00C2D5FC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C0ABDEF1A48E00D00C2D5FC /* ViewController.swift */; };
+		4C0ABDF01A48E00D00C2D5FC /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C0ABDEF1A48E00D00C2D5FC /* MainViewController.swift */; };
 		4C0ABDF31A48E00D00C2D5FC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C0ABDF11A48E00D00C2D5FC /* Main.storyboard */; };
 		4C0ABDF51A48E00D00C2D5FC /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4C0ABDF41A48E00D00C2D5FC /* Images.xcassets */; };
 		4C0ABDF81A48E00D00C2D5FC /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4C0ABDF61A48E00D00C2D5FC /* LaunchScreen.xib */; };
 		4C0ABE041A48E00D00C2D5FC /* TipMeMariTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C0ABE031A48E00D00C2D5FC /* TipMeMariTests.swift */; };
+		4CEA513E1A4FC6BB0081A37B /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CEA513D1A4FC6BB0081A37B /* SettingsViewController.swift */; };
+		4CEA51411A4FD2B90081A37B /* protocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CEA51401A4FD2B90081A37B /* protocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,13 +31,15 @@
 		4C0ABDE81A48E00D00C2D5FC /* TipMeMari.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TipMeMari.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C0ABDEC1A48E00D00C2D5FC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4C0ABDED1A48E00D00C2D5FC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		4C0ABDEF1A48E00D00C2D5FC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		4C0ABDEF1A48E00D00C2D5FC /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		4C0ABDF21A48E00D00C2D5FC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4C0ABDF41A48E00D00C2D5FC /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		4C0ABDF71A48E00D00C2D5FC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		4C0ABDFD1A48E00D00C2D5FC /* TipMeMariTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TipMeMariTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C0ABE021A48E00D00C2D5FC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4C0ABE031A48E00D00C2D5FC /* TipMeMariTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipMeMariTests.swift; sourceTree = "<group>"; };
+		4CEA513D1A4FC6BB0081A37B /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SettingsViewController.swift; path = ../SettingsViewController.swift; sourceTree = "<group>"; };
+		4CEA51401A4FD2B90081A37B /* protocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = protocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,8 +81,8 @@
 		4C0ABDEA1A48E00D00C2D5FC /* TipMeMari */ = {
 			isa = PBXGroup;
 			children = (
+				4CEA513F1A4FC6C70081A37B /* View Controllers */,
 				4C0ABDED1A48E00D00C2D5FC /* AppDelegate.swift */,
-				4C0ABDEF1A48E00D00C2D5FC /* ViewController.swift */,
 				4C0ABDF11A48E00D00C2D5FC /* Main.storyboard */,
 				4C0ABDF41A48E00D00C2D5FC /* Images.xcassets */,
 				4C0ABDF61A48E00D00C2D5FC /* LaunchScreen.xib */,
@@ -110,6 +114,16 @@
 				4C0ABE021A48E00D00C2D5FC /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		4CEA513F1A4FC6C70081A37B /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				4CEA513D1A4FC6BB0081A37B /* SettingsViewController.swift */,
+				4C0ABDEF1A48E00D00C2D5FC /* MainViewController.swift */,
+				4CEA51401A4FD2B90081A37B /* protocol.swift */,
+			);
+			name = "View Controllers";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -212,8 +226,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4C0ABDF01A48E00D00C2D5FC /* ViewController.swift in Sources */,
+				4C0ABDF01A48E00D00C2D5FC /* MainViewController.swift in Sources */,
 				4C0ABDEE1A48E00D00C2D5FC /* AppDelegate.swift in Sources */,
+				4CEA513E1A4FC6BB0081A37B /* SettingsViewController.swift in Sources */,
+				4CEA51411A4FD2B90081A37B /* protocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -405,6 +421,7 @@
 				4C0ABE091A48E00D00C2D5FC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4C0ABE0A1A48E00D00C2D5FC /* Build configuration list for PBXNativeTarget "TipMeMariTests" */ = {
 			isa = XCConfigurationList;
@@ -413,6 +430,7 @@
 				4C0ABE0C1A48E00D00C2D5FC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
