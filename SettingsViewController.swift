@@ -26,17 +26,25 @@ class SettingsViewController: UIViewController {
         defaultTipContainer.backgroundColor = UIColorFromHex(0x6393F3)
         var defaultTip = defaults.floatForKey("defaultTip")
         if (defaultTip != 0) {
-            defaultTipAmountLabel.text = "\(Int(defaultTip))"
-            defaultTipAmountSlider.value = defaultTip
+            setDefaultTip(defaultTip)
         }
         else {
-            defaultTipAmountLabel.text = "20"
-            defaultTipAmountSlider.value = Float(20)
-            defaults.setFloat(Float(20), forKey: "defaultTip")
-            defaults.synchronize()
+            resetDefaultTip()
         }
     }
     
+    func setDefaultTip(defaultTip: Float) {
+        defaultTipAmountLabel.text = "\(Int(defaultTip))"
+        defaultTipAmountSlider.value = defaultTip
+    }
+    
+    func resetDefaultTip() {
+        defaultTipAmountLabel.text = "20"
+        defaultTipAmountSlider.value = Float(20)
+        defaults.setFloat(Float(20), forKey: "defaultTip")
+        defaults.synchronize()
+    }
+
     override func viewWillDisappear(animated: Bool) {
         super.viewWillDisappear(animated)
         updateSettings()
